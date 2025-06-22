@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Controle de Estoque</h1>
+        <a class="menu-link" href="{{ url_for('cadastrar_insumo') }}">Cadastrar Insumo</a>
+        <a class="menu-link" href="{{ url_for('cadastrar_produto') }}">Cadastrar Produto</a>
+        <a class="menu-link" href="{{ url_for('registrar_venda') }}">Registrar Venda</a>
+        <a class="menu-link" href="{{ url_for('estoque') }}">Visualizar Estoque</a>
+        <a class="menu-link" href="{{ url_for('vendas') }}">Visualizar Vendas</a>
+    </div>
+</body>
+</html>

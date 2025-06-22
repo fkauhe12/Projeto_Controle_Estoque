@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vendas Registradas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Vendas Registradas</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Venda</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for venda in vendas %}
+                <tr>
+                    <td>{{ venda[0] }}</td> <!-- id -->
+                    <td>{{ venda[1] }}</td> <!-- produto -->
+                    <td>{{ venda[2] }}</td> <!-- quantidade -->
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="3" style="text-align:center;">Nenhuma venda registrada.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+</body>
+</html>

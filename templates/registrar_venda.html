@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registrar Venda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Venda</h1>
+        <form method="POST" action="{{ url_for('registrar_venda') }}">
+            <label for="produto_id">Produto:</label>
+            <select id="produto_id" name="produto_id" required>
+                <option value="" disabled selected>Selecione o produto</option>
+                {% for id, nome in produtos %}
+                <option value="{{ id }}">{{ nome }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" step="0.01" id="quantidade" name="quantidade" required>
+
+            <button type="submit">Registrar Venda</button>
+        </form>
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+</body>
+</html>

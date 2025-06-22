@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar Produto</h1>
+        <form method="POST" action="{{ url_for('cadastrar_produto') }}">
+            <label for="nome">Nome do Produto:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo geral do body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container para as páginas */
+.container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Títulos */
+h1 {
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Inputs e select */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px 12px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botão */
+button {
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Botão de voltar */
+.voltar {
+  display: block;
+  margin: 25px auto 0;
+  max-width: 300px;
+  padding: 12px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.voltar:hover {
+  background-color: #5a6268;
+}
+
+/* Menu inicial */
+.menu-link {
+  display: block;
+  margin: 12px auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo das tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* Cabeçalho da tabela */
+table thead tr {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+table thead th {
+  padding: 12px 8px;
+  border: 1px solid #0056b3;
+}
+
+/* Linhas pares com cor diferente */
+table tbody tr:nth-child(even) {
+  background-color: #f2f7ff;
+}
+
+/* Efeito hover nas linhas */
+table tbody tr:hover {
+  background-color: #d9e6ff;
+}
+
+/* Células da tabela */
+table tbody td {
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px 15px;
+    width: 100%;
+  }
+
+  a, button {
+    font-size: 1rem;
+    padding: 10px;
+    max-width: 100%;
+  }
+}
