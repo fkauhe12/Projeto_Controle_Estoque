@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Calcular Matéria-Prima</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcular Matéria-Prima</h1>
+        <form method="POST" action="{{ url_for('calcular_materia') }}">
+            <label for="produto_id">Produto:</label>
+            <select id="produto_id" name="produto_id" required>
+                <option value="" disabled selected>Selecione o produto</option>
+                {% for produto in produtos %}
+                    <option value="{{ produto[0] }}">{{ produto[1] }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="quantidade">Quantidade a Produzir:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        {% if calculos %}
+            <h2>Resultado do Cálculo</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade Produzida</th>
+                        <th>Matéria-Prima por Unidade</th>
+                        <th>Total de Matéria-Prima Necessária</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for calc in calculos %}
+                        <tr>
+                            <td>{{ calc.produto }}</td>
+                            <td>{{ calc.quantidade_produzida }}</td>
+                            <td>{{ calc.materia_prima_por_unidade }}</td>
+                            <td>{{ calc.total_materia }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+</body>
+</html>

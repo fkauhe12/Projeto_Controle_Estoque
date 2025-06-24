@@ -7,12 +7,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sistema de Controle de Estoque</h1>
-        <a class="menu-link" href="{{ url_for('cadastrar_insumo') }}">Cadastrar Insumo</a>
+        <h1>Sistema de Calculo de Materia Prima</h1>
         <a class="menu-link" href="{{ url_for('cadastrar_produto') }}">Cadastrar Produto</a>
         <a class="menu-link" href="{{ url_for('registrar_venda') }}">Registrar Venda</a>
-        <a class="menu-link" href="{{ url_for('estoque') }}">Visualizar Estoque</a>
-        <a class="menu-link" href="{{ url_for('vendas') }}">Visualizar Vendas</a>
+        <a class="menu-link" href="{{ url_for('calcular_materia') }}">Calcular Materia</a>
+        <a class="menu-link" href="{{ url_for('relatorio_vendas') }}">Relatório Vendas</a>
     </div>
 </body>
 </html>
