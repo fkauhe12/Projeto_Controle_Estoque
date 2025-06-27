@@ -8,14 +8,13 @@
 /* Estilo geral do body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
   padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom right, #bacde4, #487199, #09417a);
-
+  background-color: #f9f9f9; /* Fallback */
+  background-image: linear-gradient(135deg, #d4e6f8, #99bde3, #558acb);
 }
 
 /* Container para as páginas */
@@ -23,10 +22,9 @@ body {
   background: white;
   padding: 30px 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
   max-width: 500px;
   width: 90%;
-  ;
 }
 
 /* Títulos */
@@ -144,7 +142,6 @@ table {
   font-size: 1rem;
 }
 
-/* Cabeçalho da tabela */
 table thead tr {
   background-color: #007bff;
   color: white;
@@ -156,17 +153,14 @@ table thead th {
   border: 1px solid #0056b3;
 }
 
-/* Linhas pares com cor diferente */
 table tbody tr:nth-child(even) {
   background-color: #f2f7ff;
 }
 
-/* Efeito hover nas linhas */
 table tbody tr:hover {
   background-color: #d9e6ff;
 }
 
-/* Células da tabela */
 table tbody td {
   padding: 10px 8px;
   border: 1px solid #ddd;
@@ -188,5 +182,11 @@ table tbody td {
     font-size: 1rem;
     padding: 10px;
     max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 40px;
   }
 }
