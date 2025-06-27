@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Visualizar Agentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Agentes Cadastrados</h1>
+
+        {% if agentes %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quartel</th>
+                        <th>Celular</th>
+                        <th>Tamanho</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for agente in agentes %}
+                        <tr>
+                            <td>{{ agente[0] }}</td>  <!-- nome do agente -->
+                            <td>{{ agente[1] }}</td>  <!-- nome do quartel -->
+                            <td>{{ agente[2] }}</td>  <!-- celular -->
+                            <td>{{ agente[3] }}</td>  <!-- tamanho da roupa -->
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Nenhum agente cadastrado.</p>
+        {% endif %}
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

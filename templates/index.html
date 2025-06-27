@@ -2,16 +2,16 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <title>Controle de Estoque</title>
+    <title>Sistema de Cadastro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Sistema de Calculo de Materia Prima</h1>
-        <a class="menu-link" href="{{ url_for('cadastrar_produto') }}">Cadastrar Produto</a>
-        <a class="menu-link" href="{{ url_for('registrar_venda') }}">Registrar Venda</a>
-        <a class="menu-link" href="{{ url_for('calcular_materia') }}">Calcular Materia</a>
-        <a class="menu-link" href="{{ url_for('relatorio_vendas') }}">Relatório Vendas</a>
+        <h1>Sistema de Cadastro</h1>
+        <a class="menu-link" href="{{ url_for('cadastrar_agente') }}">Cadastrar Agente</a>
+        <a class="menu-link" href="{{ url_for('visualizar_agentes') }}">visualizar Agentes</a>
     </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Agente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar Agente</h1>
+        <form method="POST" action="{{ url_for('cadastrar_agente') }}">
+            <label for="nome">Nome do Agente:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="quartel">Quartel:</label>
+            <select id="quartel" name="quartel" required>
+                {% for q in quarteis %}
+                    <option value="{{ q[0] }}">{{ q[1] }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="celular">Telefone:</label>
+            <input type="tel" id="celular" name="celular" placeholder="(99) 999999999" maxlength="15" required>
+
+            <label for="tamanho">Tamanho da Roupa:</label>
+            <input type="text" id="tamanho" name="tamanho" maxlength="3" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <a class="voltar" href="{{ url_for('index') }}">Voltar para o menu</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -50,6 +50,7 @@ label {
 /* Inputs e select */
 input[type="text"],
 input[type="number"],
+input[type="tel"],
 select {
   padding: 10px 12px;
   border: 1.8px solid #ccc;
@@ -60,9 +61,19 @@ select {
 
 input[type="text"]:focus,
 input[type="number"]:focus,
+input[type="tel"]:focus,
 select:focus {
   border-color: #007bff;
   outline: none;
+}
+
+/* Estilo específico para o telefone */
+input[type="tel"] {
+  font-family: monospace;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
 }
 
 /* Botão */
