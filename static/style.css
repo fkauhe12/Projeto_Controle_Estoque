@@ -14,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(to bottom right, #bacde4, #487199, #09417a);
+
 }
 
 /* Container para as páginas */
@@ -21,9 +23,10 @@ body {
   background: white;
   padding: 30px 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
   max-width: 500px;
   width: 90%;
+  ;
 }
 
 /* Títulos */
