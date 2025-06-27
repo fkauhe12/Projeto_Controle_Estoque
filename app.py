@@ -3,6 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 
+# Funções para conectar ao banco de dados e inicializar as tabelas
 def conectar():
     return sqlite3.connect('Cadastro.db')
 
